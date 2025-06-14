@@ -91,7 +91,7 @@ const Projects = () => {
     {
       title: 'Line Follower',
       description: 'Advanced line-following robot using PID control and ultrasonic sensors. Adaptable to changes in terrain and capable of path correction in real time.',
-      image: '/Line following robot copy copy.jpg',
+      image: '/Rescue_line.png',
       technologies: ['Arduino', 'PID Control', 'Ultrasonic Sensors', 'C++'],
       category: 'Robotics',
       liveUrl: '#',
@@ -100,7 +100,7 @@ const Projects = () => {
     {
       title: 'Rescue Line & Maze Robot',
       description: 'Built for competitive maze-solving and line-rescue missions. Uses multi-sensor input (IR, Ultrasonic, Encoder) and an autonomous decision system to complete challenges.',
-      image: '/Line following robot copy copy.jpg',
+      image: '/Rescue_maze.png',
       technologies: ['Arduino', 'IR Sensors', 'Ultrasonic', 'Encoders'],
       category: 'Robotics',
       liveUrl: '#',
