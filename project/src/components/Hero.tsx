@@ -4,7 +4,7 @@ import { ChevronDown, Github, Linkedin, Mail, Download, Eye } from 'lucide-react
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
-      <div className="absolute inset-0 bg-[url('/src/assets/images/Fira_ cup copy copy.jpg')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/Fira_ cup copy copy.jpg')] bg-cover bg-center opacity-10"></div>
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">

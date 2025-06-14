@@ -6,17 +6,17 @@ const Gallery = () => {
 
   const galleryItems = [
     {
-      src: '/src/assets/images/Fira_ cup copy copy.jpg',
+      src: '/Fira_ cup copy copy.jpg',
       caption: 'FIRA RoboCup Canada 2025 - Championship Victory',
       tags: ['FIRA', 'Championship', 'Robotics']
     },
     {
-      src: '/src/assets/images/Line following robot copy copy.jpg',
+      src: '/Line following robot copy copy.jpg',
       caption: 'Line Following Robot - Advanced PID Control System',
       tags: ['Robotics', 'Arduino', 'Competition']
     },
     {
-      src: '/src/assets/images/Medport _ SienceFair copy copy.jpg',
+      src: '/Medport _ SienceFair copy copy.jpg',
       caption: 'Toronto Science Fair - MedPort Silver Medal',
       tags: ['Science Fair', 'Innovation', 'Award']
     },
