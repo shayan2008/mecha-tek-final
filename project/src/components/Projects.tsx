@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: 'DRC Explorer Robot',
       description: 'An autonomous mobile robot built for simulated disaster and rescue missions. Uses SLAM-based navigation, onboard sensors, and task modules for map generation and autonomous decision-making.',
-      image: '/src/assets/images/Line following robot copy copy.jpg',
+      image: '/Line following robot copy copy.jpg',
       technologies: ['Arduino', 'Lidar', 'Python', 'IR Sensors', 'OpenCV'],
       category: 'Robotics',
       liveUrl: '#',
@@ -46,7 +46,7 @@ const Projects = () => {
     {
       title: 'MedPort',
       description: 'IoT-enabled medication reminder box with real-time tracking, sensor logging, and mobile notifications. Award-winning at Toronto Science Fair with refill alerts and dosage logging.',
-      image: '/src/assets/images/Medport _ SienceFair copy copy.jpg',
+      image: '/Medport _ SienceFair copy copy.jpg',
       technologies: ['Arduino', 'IoT', 'Mobile App', 'Sensors'],
       category: 'IoT',
       liveUrl: '#',
@@ -91,7 +91,7 @@ const Projects = () => {
     {
       title: 'Line Follower',
       description: 'Advanced line-following robot using PID control and ultrasonic sensors. Adaptable to changes in terrain and capable of path correction in real time.',
-      image: '/src/assets/images/Line following robot copy copy.jpg',
+      image: '/Line following robot copy copy.jpg',
       technologies: ['Arduino', 'PID Control', 'Ultrasonic Sensors', 'C++'],
       category: 'Robotics',
       liveUrl: '#',
@@ -100,7 +100,7 @@ const Projects = () => {
     {
       title: 'Rescue Line & Maze Robot',
       description: 'Built for competitive maze-solving and line-rescue missions. Uses multi-sensor input (IR, Ultrasonic, Encoder) and an autonomous decision system to complete challenges.',
-      image: '/src/assets/images/Line following robot copy copy.jpg',
+      image: '/Line following robot copy copy.jpg',
       technologies: ['Arduino', 'IR Sensors', 'Ultrasonic', 'Encoders'],
       category: 'Robotics',
       liveUrl: '#',
