@@ -58,7 +58,8 @@ const Gallery = () => {
     { src: '/CETA_Robotics Competition.png', caption: 'CETA Robotics Competition', tags: ['Robotics', 'Competition'] },
     { src: '/Robocup_ invation.png', caption: 'Robocup Invitation', tags: ['Robotics', 'Competition'] },
     { src: '/Tele_Switch_Circuit.png', caption: 'Tele Switch Circuit', tags: ['Project', 'Electronics'] },
-    { src: '/swimming.jpg', caption: 'Swimming', tags: ['Swimming', 'Athletics'] }
+    { src: '/swimming.jpg', caption: 'Swimming', tags: ['Swimming', 'Athletics'] },
+    { src: '/smart_vase.jpg', caption: 'Smart Vase', tags: ['IoT', 'Project'] }
   ];
 
   const openLightbox = (index: number) => {

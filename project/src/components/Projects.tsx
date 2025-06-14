@@ -73,7 +73,7 @@ const Projects = () => {
     {
       title: 'Smart Vase',
       description: 'IoT smart plant system that self-waters based on soil moisture, light level, and humidity feedback. Features a closed-loop automation system with an app dashboard.',
-      image: 'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/smart_vase.jpg',
       technologies: ['Arduino', 'Sensors', 'IoT', 'Mobile App'],
       category: 'IoT',
       liveUrl: '#',
