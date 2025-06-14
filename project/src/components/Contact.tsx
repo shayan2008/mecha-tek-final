@@ -30,6 +30,12 @@ const Contact = () => {
       link: 'mailto:shayan.doroud86@gmail.com'
     },
     {
+      icon: <Mail size={24} />,
+      title: 'Work Email',
+      value: 'shayan.doroudiani@mecha-tek.com',
+      link: 'mailto:shayan.doroudiani@mecha-tek.com'
+    },
+    {
       icon: <Phone size={24} />,
       title: 'Phone',
       value: '647-975-3236',
