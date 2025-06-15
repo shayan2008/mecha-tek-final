@@ -21,7 +21,7 @@ const Awards = () => {
     },
     {
       icon: <Globe size={24} />,
-      title: 'FIRA World Championships Qualifier',
+      title: 'FIRA World Championships and Robocup World Championships Qualifier',
       description: 'Qualified for Korea & Brazil 2025',
       year: '2025',
       category: 'Robotics',
