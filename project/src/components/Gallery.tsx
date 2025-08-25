@@ -59,7 +59,9 @@ const Gallery = () => {
     { src: '/Robocup_ invation.png', caption: 'Robocup Invitation', tags: ['Robotics', 'Competition'] },
     { src: '/Tele_Switch_Circuit.png', caption: 'Tele Switch Circuit', tags: ['Project', 'Electronics'] },
     { src: '/swimming.jpg', caption: 'Swimming', tags: ['Swimming', 'Athletics'] },
-    { src: '/smart_vase.jpg', caption: 'Smart Vase', tags: ['IoT', 'Project'] }
+    { src: '/smart_vase.jpg', caption: 'Smart Vase', tags: ['IoT', 'Project'] },
+    { src: '/3rd place in worlds.jpg', caption: '3rd place in World Cup Fira 2025 South Korea', tags: ['Robotics', 'Competition', 'World Cup'] },
+    { src: '/Robot_DRC.png', caption: 'Robot DRC', tags: ['Robotics', 'Competition'] }
   ];
 
   const openLightbox = (index: number) => {

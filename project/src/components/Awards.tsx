@@ -98,6 +98,14 @@ const Awards = () => {
       year: '2024',
       category: 'Athletics',
       color: 'text-yellow-400'
+    },
+    {
+      icon: <Medal size={24} />,
+      title: '3rd place in World Cup Fira 2025 South korea',
+      description: 'World Cup Fira in South Korea',
+      year: '2025',
+      category: 'Robotics',
+      color: 'text-orange-400'
     }
   ];
 
