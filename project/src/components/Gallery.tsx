@@ -61,7 +61,22 @@ const Gallery = () => {
     { src: '/swimming.jpg', caption: 'Swimming', tags: ['Swimming', 'Athletics'] },
     { src: '/smart_vase.jpg', caption: 'Smart Vase', tags: ['IoT', 'Project'] },
     { src: '/3rd place in worlds.jpg', caption: '3rd place in World Cup Fira 2025 South Korea', tags: ['Robotics', 'Competition', 'World Cup'] },
-    { src: '/Robot_DRC.png', caption: 'Robot DRC', tags: ['Robotics', 'Competition'] }
+    { src: '/Robot_DRC.png', caption: 'Robot DRC', tags: ['Robotics', 'Competition'] },
+    {
+      src: '/SPYS.png',
+      caption: 'SPYS - Swim Platform Stroke Analysis',
+      tags: ['AI', 'Swimming', 'Project']
+    },
+    {
+      src: '/hand.webp',
+      caption: 'Gesture Imitator',
+      tags: ['AI', 'Computer Vision', 'Project']
+    },
+    {
+      src: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=800',
+      caption: 'Wireless Crane Control System',
+      tags: ['IoT', 'Embedded', 'Project']
+    }
   ];
 
   const openLightbox = (index: number) => {
