@@ -127,34 +127,7 @@ const Projects = () => {
     {
       title: 'Wireless Crane',
       description: 'A remote-controlled crane operating over a wireless network, built with embedded systems.',
-      image: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Arduino', 'ESP32', 'Wireless', 'C++'],
-      category: 'IoT',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
-    },
-    {
-      title: 'SPYS',
-      description: 'A swim platform that analyzes the stroke.',
-      image: '/SPYS.png',
-      technologies: ['AI', 'React', 'TypeScript', 'Vite'],
-      category: 'AI',
-      liveUrl: 'https://spys.netlify.app/',
-      githubUrl: 'https://github.com/shayan2008/'
-    },
-    {
-      title: 'Gesture Imitator',
-      description: 'An AI-powered system that imitates human gestures in real-time.',
-      image: '/hand.webp',
-      technologies: ['Python', 'OpenCV', 'TensorFlow'],
-      category: 'AI',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
-    },
-    {
-      title: 'Wireless Crane',
-      description: 'A remote-controlled crane operating over a wireless network, built with embedded systems.',
-      image: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/profile-placeholder.png',
       technologies: ['Arduino', 'ESP32', 'Wireless', 'C++'],
       category: 'IoT',
       liveUrl: '#',
