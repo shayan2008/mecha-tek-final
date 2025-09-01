@@ -73,7 +73,7 @@ const Gallery = () => {
       tags: ['AI', 'Computer Vision', 'Project']
     },
     {
-      src: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=800',
+      src: '/profile-placeholder.png',
       caption: 'Wireless Crane Control System',
       tags: ['IoT', 'Embedded', 'Project']
     }
