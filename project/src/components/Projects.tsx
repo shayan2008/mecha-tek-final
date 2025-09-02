@@ -19,7 +19,7 @@ const Projects = () => {
     {
       title: 'Autonomous Car (Jetson Nano)',
       description: 'Designed for obstacle avoidance, object detection, and real-time lane correction. Uses Python and OpenCV on the Jetson Nano platform for deep-learning vision integration.',
-      image: 'https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/wirless_car.jpg',
       technologies: ['Jetson Nano', 'Python', 'OpenCV', 'Deep Learning'],
       category: 'AI',
       liveUrl: '#',
@@ -127,7 +127,7 @@ const Projects = () => {
     {
       title: 'Wireless Crane',
       description: 'A remote-controlled crane operating over a wireless network, built with embedded systems.',
-      image: '/profile-placeholder.png',
+      image: '/wirless Crane.jpg',
       technologies: ['Arduino', 'ESP32', 'Wireless', 'C++'],
       category: 'IoT',
       liveUrl: '#',
