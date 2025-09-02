@@ -127,7 +127,7 @@ const Projects = () => {
     {
       title: 'Wireless Crane',
       description: 'A remote-controlled crane operating over a wireless network, built with embedded systems.',
-      image: '/wirless Crane.jpg',
+      image: '/wirless_car.jpg',
       technologies: ['Arduino', 'ESP32', 'Wireless', 'C++'],
       category: 'IoT',
       liveUrl: '#',

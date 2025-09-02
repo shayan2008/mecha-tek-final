@@ -78,7 +78,7 @@ const Gallery = () => {
       tags: ['AI', 'Robotics', 'Jetson Nano']
     },
     {
-      src: '/wirless Crane.jpg',
+      src: '/wirless_car.jpg',
       caption: 'Wireless Crane Control System',
       tags: ['IoT', 'Embedded', 'Project']
     }
