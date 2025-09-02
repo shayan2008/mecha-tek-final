@@ -73,7 +73,12 @@ const Gallery = () => {
       tags: ['AI', 'Computer Vision', 'Project']
     },
     {
-      src: '/profile-placeholder.png',
+      src: '/wirless_car.jpg',
+      caption: 'Autonomous Car',
+      tags: ['AI', 'Robotics', 'Jetson Nano']
+    },
+    {
+      src: '/wirless_car.jpg',
       caption: 'Wireless Crane Control System',
       tags: ['IoT', 'Embedded', 'Project']
     }
