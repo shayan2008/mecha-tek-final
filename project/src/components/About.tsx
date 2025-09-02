@@ -32,7 +32,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
           <div className="mb-8">
             <img 
-              src="/profile-placeholder copy copy.png"
+              src="/profile-placeholder.png"
               alt="Shayan Doroudiani" 
               className="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-blue-500/30"
             />
