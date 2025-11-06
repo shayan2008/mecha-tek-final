@@ -4,6 +4,14 @@ import { Trophy, Medal, Award, Star, Globe, Zap } from 'lucide-react';
 const Awards = () => {
   const awards = [
     {
+      icon: <Globe size={24} />,
+      title: 'Team Canada in Robotics',
+      description: 'Selected to represent Canada in international robotics competitions.',
+      year: '2025',
+      category: 'Robotics',
+      color: 'text-red-400'
+    },
+    {
       icon: <Trophy size={24} />,
       title: '2x 1st Place, FIRA RoboCup Canada',
       description: 'First place victories in FIRA RoboCup Canada competitions',

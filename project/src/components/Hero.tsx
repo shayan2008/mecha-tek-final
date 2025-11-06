@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12 max-w-6xl mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
               <div className="text-lg font-bold text-blue-400">🇨🇦 Toronto</div>
-              <div className="text-xs text-slate-300">Grade 11</div>
+              <div className="text-xs text-slate-300">Grade 12</div>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-slate-700/50">
               <div className="text-lg font-bold text-purple-400">🏆 15+</div>
