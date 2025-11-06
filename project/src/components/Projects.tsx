@@ -8,6 +8,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Swim Track',
+      description: 'Swim Results Dashboard (JavaFX)\nA small JavaFX app that lets you enter swimmers, add their race results, and instantly see simple analytics (Top-5 bar chart, personal trend line, and event distribution pie). It’s intentionally lightweight (no database) so it runs easily in IntelliJ.',
+      image: '/swimtrack.png',
+      technologies: ['JavaFX', 'Java'],
+      category: 'Apps',
+      liveUrl: '#',
+      githubUrl: 'https://github.com/shayan2008/SwimTrack'
+    },
+    {
       title: 'DRC Explorer Robot',
       description: 'An autonomous mobile robot built for simulated disaster and rescue missions. Uses SLAM-based navigation, onboard sensors, and task modules for map generation and autonomous decision-making.',
       image: '/Line following robot copy copy.jpg',
