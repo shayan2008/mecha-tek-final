@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Code, Zap, Heart, Shield, Cpu, Wrench } from 'lucide-react';
+import { Award, Code, Zap, Heart, Shield, Cpu } from 'lucide-react';
 
 const Certificates = () => {
   const certificateCategories = [

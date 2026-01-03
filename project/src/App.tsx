@@ -7,6 +7,7 @@ import Awards from './components/Awards';
 import Leadership from './components/Leadership';
 import Certificates from './components/Certificates';
 import Gallery from './components/Gallery';
+import Research from './components/Research';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ function App() {
         <Leadership />
         <Certificates />
         <Gallery />
+        <Research />
         <Contact />
       </main>
       <Footer />
