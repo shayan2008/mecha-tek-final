@@ -141,6 +141,15 @@ const Projects = () => {
       category: 'IoT',
       liveUrl: '#',
       githubUrl: 'https://github.com/shayan2008/'
+    },
+    {
+      title: 'Calculus Optimization of 200m Freestyle',
+      description: 'A publication-style, coach-grade Streamlit mini-app for analyzing and fitting 200m freestyle (LCM) race plans using a simplified but structured physics + physiology performance model.',
+      image: '/research_thumbnail.png',
+      technologies: ['Python', 'Streamlit', 'Pandas', 'Matplotlib'],
+      category: 'AI',
+      liveUrl: '/200m_freestyle_calculus_optimization_report.pdf',
+      githubUrl: 'https://github.com/shayan2008/Calculus-Optimization-of-200-Free'
     }
   ];
 
@@ -216,7 +225,7 @@ const Projects = () => {
                       className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                     >
                       <ExternalLink size={16} />
-                      <span className="text-sm">Details</span>
+                      <span className="text-sm">{project.title === 'Calculus Optimization of 200m Freestyle' ? 'Download' : 'Details'}</span>
                     </a>
                     <a
                       href={project.githubUrl}
