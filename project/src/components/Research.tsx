@@ -35,7 +35,32 @@ const Research = () => {
             </div>
 
             {/* Other sections would continue here... */}
-            <div>
+
+            <div className="mt-8 pt-6 border-t border-slate-700">
+              <h4 className="text-2xl font-semibold mb-4 text-white">Access the Full Research & Interactive Tool</h4>
+              <p className="mb-4">
+                The complete research paper is available for download. Additionally, an interactive web application built with Streamlit is available in the project's GitHub repository. This tool allows you to run your own simulations and analyses based on the models discussed in the paper.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://github.com/shayan2008/Calculus-Optimization-of-200-Free"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors duration-300 text-center"
+                >
+                  View on GitHub
+                </a>
+                <a
+                  href="https://raw.githubusercontent.com/shayan2008/Calculus-Optimization-of-200-Free/main/200m_freestyle_calculus_optimization_report.pdf"
+                  download
+                  className="inline-block bg-slate-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-600 transition-colors duration-300 text-center"
+                >
+                  Download Full Research (PDF)
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8">
               <h4 className="text-2xl font-semibold mb-2 text-white">References</h4>
               <ul className="list-disc list-inside space-y-2 pl-4 text-sm">
                 <li>McGibbon, K. (2020). Achieving marginal gains: perfecting the pacing strategies of Australian swimmers. (PhD Thesis). – Discusses pacing and notes even pacing is optimal due to cubic drag relationship.</li>
