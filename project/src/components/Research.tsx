@@ -51,7 +51,7 @@ const Research = () => {
                   View on GitHub
                 </a>
                 <a
-                  href="https://raw.githubusercontent.com/shayan2008/Calculus-Optimization-of-200-Free/main/200m_freestyle_calculus_optimization_report.pdf"
+                  href="/200m_freestyle_calculus_optimization_report.pdf"
                   download
                   className="inline-block bg-slate-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-600 transition-colors duration-300 text-center"
                 >
