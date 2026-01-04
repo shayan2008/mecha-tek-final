@@ -43,10 +43,18 @@ const Research = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://github.com/shayan2008/Calculus-Optimization-of-200-Free"
+                  href="https://calculus-optimiziation-200mfree.streamlit.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors duration-300 text-center"
+                >
+                  Open Live Optimizer
+                </a>
+                <a
+                  href="https://github.com/shayan2008/Calculus-Optimization-of-200-Free"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-slate-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-600 transition-colors duration-300 text-center"
                 >
                   View on GitHub
                 </a>
