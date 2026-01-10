@@ -19,7 +19,7 @@ const Projects = () => {
     {
       title: 'DRC Explorer Robot',
       description: 'An autonomous mobile robot built for simulated disaster and rescue missions. Uses SLAM-based navigation, onboard sensors, and task modules for map generation and autonomous decision-making.',
-      image: '/Line following robot copy copy.jpg',
+      image: ['/Line following robot copy copy.jpg', '/DRC.jpg', '/Robot line followe design.png'],
       technologies: ['Arduino', 'Lidar', 'Python', 'IR Sensors', 'OpenCV'],
       category: 'Robotics',
       liveUrl: '#',
@@ -55,7 +55,7 @@ const Projects = () => {
     {
       title: 'MedPort',
       description: 'IoT-enabled medication reminder box with real-time tracking, sensor logging, and mobile notifications. Award-winning at Toronto Science Fair with refill alerts and dosage logging.',
-      image: '/Medport _ SienceFair copy copy.jpg',
+      image: ['/Medport _ SienceFair copy copy.jpg', '/Medport.jpg'],
       technologies: ['Arduino', 'IoT', 'Mobile App', 'Sensors'],
       category: 'IoT',
       liveUrl: '#',
@@ -73,7 +73,7 @@ const Projects = () => {
     {
       title: 'TeleSwitch (WiFi & SMS)',
       description: 'A smart plug system controllable via both an app and SMS. Supports multiple devices and includes energy usage analytics and remote scheduling.',
-      image: 'https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: ['/TeleSwitch circuit.png', '/TeleSwitch sim.png', '/Teleswitch schmeatic.png'],
       technologies: ['ESP32', 'WiFi', 'SMS API', 'Mobile App'],
       category: 'IoT',
       liveUrl: '#',
@@ -82,7 +82,7 @@ const Projects = () => {
     {
       title: 'Smart Vase',
       description: 'IoT smart plant system that self-waters based on soil moisture, light level, and humidity feedback. Features a closed-loop automation system with an app dashboard.',
-      image: '/smart_vase.jpg',
+      image: ['/smart_vase.jpg', '/Smart Vase.jpg', '/Smart Vase2.jpg', '/Smart Vaseapp.jpg'],
       technologies: ['Arduino', 'Sensors', 'IoT', 'Mobile App'],
       category: 'IoT',
       liveUrl: '#',
@@ -136,7 +136,7 @@ const Projects = () => {
     {
       title: 'Wireless Crane',
       description: 'A remote-controlled crane operating over a wireless network, built with embedded systems.',
-      image: '/wirless_car.jpg',
+      image: ['/wirless_car.jpg', '/Wireless Crane.jpg'],
       technologies: ['Arduino', 'ESP32', 'Wireless', 'C++'],
       category: 'IoT',
       liveUrl: '#',
@@ -188,13 +188,26 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
               <div key={index} className="bg-slate-900/50 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div className="relative overflow-hidden h-48">
+                  {Array.isArray(project.image) ? (
+                    <div className="flex overflow-x-auto snap-x snap-mandatory h-full">
+                      {project.image.map((img, i) => (
+                        <img
+                          key={i}
+                          src={img}
+                          alt={`${project.title} ${i + 1}`}
+                          className="w-full h-full object-cover snap-center flex-shrink-0"
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover hover:scale-110 transition-transform duration-300"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent pointer-events-none"></div>
                   <div className="absolute top-4 right-4">
                     <span className="px-2 py-1 bg-blue-600/80 text-white text-xs rounded-full">
                       {project.category}
