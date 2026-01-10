@@ -11,7 +11,8 @@ const Certificates = () => {
         {
           name: 'Mechatronics Course Certificate',
           details: '100+ hours of comprehensive training',
-          issuer: 'Professional Development'
+          issuer: 'Professional Development',
+          image: 'Mechatronic Course.png',
         },
         {
           name: 'Altium Designer PCB Design Certificate',
@@ -130,6 +131,9 @@ const Certificates = () => {
                             <p className="text-slate-400 text-xs">
                               {cert.issuer}
                             </p>
+                            {cert.image && (
+                              <img src={cert.image} alt={cert.name} className="mt-2 rounded-lg" />
+                            )}
                           </div>
                         </div>
                       </div>
