@@ -148,8 +148,9 @@ const Projects = () => {
       image: '/research_thumbnail.png',
       technologies: ['Python', 'Streamlit', 'Pandas', 'Matplotlib'],
       category: 'AI',
-      liveUrl: 'https://github.com/shayan2008/Calculus-Optimization-of-200-Free',
-      githubUrl: 'https://github.com/shayan2008/Calculus-Optimization-of-200-Free'
+      liveUrl: '/200m_freestyle_calculus_optimization_report.pdf',
+      githubUrl: 'https://github.com/shayan2008/Calculus-Optimization-of-200-Free',
+      websiteUrl: 'https://calculus-optimiziation-200mfree.streamlit.app/'
     }
   ];
 
@@ -249,6 +250,17 @@ const Projects = () => {
                       <Github size={16} />
                       <span className="text-sm">Code</span>
                     </a>
+                    {project.websiteUrl && (
+                      <a
+                        href={project.websiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                      >
+                        <ExternalLink size={16} />
+                        <span className="text-sm">Website</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
