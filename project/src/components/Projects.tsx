@@ -13,7 +13,7 @@ const Projects = () => {
       image: '/swimtrack.png',
       technologies: ['JavaFX', 'Java'],
       category: 'Apps',
-      liveUrl: '#',
+      liveUrl: 'https://github.com/shayan2008/SwimTrack',
       githubUrl: 'https://github.com/shayan2008/SwimTrack'
     },
     {
@@ -22,17 +22,17 @@ const Projects = () => {
       image: ['/Line following robot copy copy.jpg', '/DRC.jpg', '/Robot line followe design.png'],
       technologies: ['Arduino', 'Lidar', 'Python', 'IR Sensors', 'OpenCV'],
       category: 'Robotics',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/DRC-Explorer',
+      githubUrl: 'https://github.com/shayan2008/DRC-Explorer'
     },
     {
       title: 'Autonomous Car (Jetson Nano)',
       description: 'Designed for obstacle avoidance, object detection, and real-time lane correction. Uses Python and OpenCV on the Jetson Nano platform for deep-learning vision integration.',
-      image: 'https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/autonomous-car.jpg',
       technologies: ['Jetson Nano', 'Python', 'OpenCV', 'Deep Learning'],
       category: 'AI',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
       title: 'SwimStroke AI',
@@ -40,8 +40,8 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Android Studio', 'ML Kit', 'Motion Sensors', 'Java'],
       category: 'AI',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/swim-ai-edge',
+      githubUrl: 'https://github.com/shayan2008/swim-ai-edge'
     },
     {
       title: 'QuantBot',
@@ -49,8 +49,8 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Python', 'Pandas', 'Matplotlib', 'Alpha Vantage API'],
       category: 'Apps',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
       title: 'MedPort',
@@ -58,8 +58,8 @@ const Projects = () => {
       image: ['/Medport _ SienceFair copy copy.jpg', '/Medport.jpg'],
       technologies: ['Arduino', 'IoT', 'Mobile App', 'Sensors'],
       category: 'IoT',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/Medport',
+      githubUrl: 'https://github.com/shayan2008/Medport'
     },
     {
       title: 'Solar Tracker',
@@ -67,8 +67,8 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Arduino', 'Servo Motors', 'LDR Sensors', 'Solar Panels'],
       category: 'Embedded',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
       title: 'TeleSwitch (WiFi & SMS)',
@@ -96,8 +96,8 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['OpenAI GPT', 'Python', 'React', 'API Integration'],
       category: 'Apps',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/ignition_hacks',
+      githubUrl: 'https://github.com/shayan2008/ignition_hacks'
     },
     {
       title: 'Line Follower',
@@ -105,8 +105,8 @@ const Projects = () => {
       image: '/Rescue_line.png',
       technologies: ['Arduino', 'PID Control', 'Ultrasonic Sensors', 'C++'],
       category: 'Robotics',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
       title: 'Rescue Line & Maze Robot',
@@ -114,8 +114,8 @@ const Projects = () => {
       image: '/Rescue_maze.png',
       technologies: ['Arduino', 'IR Sensors', 'Ultrasonic', 'Encoders'],
       category: 'Robotics',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'http://github.com/shayan2008/Robocup-Junior-simulation',
+      githubUrl: 'http://github.com/shayan2008/Robocup-Junior-simulation'
     },
     {
       title: 'SPYS',
@@ -124,7 +124,7 @@ const Projects = () => {
       technologies: ['AI', 'React', 'TypeScript', 'Vite'],
       category: 'AI',
       liveUrl: 'https://spys.netlify.app/',
-      githubUrl: 'https://github.com/shayan2008/'
+      githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
       title: 'Gesture Imitator',
@@ -132,8 +132,8 @@ const Projects = () => {
       image: '/hand.webp',
       technologies: ['Python', 'OpenCV', 'TensorFlow'],
       category: 'AI',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/Finger_detection',
+      githubUrl: 'https://github.com/shayan2008/Finger_detection'
     },
     {
       title: 'Wireless Crane',
@@ -141,8 +141,8 @@ const Projects = () => {
       image: ['/wirless_car.jpg', '/Wireless Crane.jpg'],
       technologies: ['Arduino', 'ESP32', 'Wireless', 'C++'],
       category: 'IoT',
-      liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
       title: 'Calculus Optimization of 200m Freestyle',
@@ -151,7 +151,8 @@ const Projects = () => {
       technologies: ['Python', 'Streamlit', 'Pandas', 'Matplotlib'],
       category: 'AI',
       liveUrl: '/200m_freestyle_calculus_optimization_report.pdf',
-      githubUrl: 'https://github.com/shayan2008/Calculus-Optimization-of-200-Free'
+      githubUrl: 'https://github.com/shayan2008/Calculus-Optimization-of-200-Free',
+      websiteUrl: 'https://calculus-optimiziation-200mfree.streamlit.app/'
     }
   ];
 
@@ -240,7 +241,10 @@ const Projects = () => {
                       className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                     >
                       <ExternalLink size={16} />
-                      <span className="text-sm">{project.title === 'Calculus Optimization of 200m Freestyle' ? 'Download' : 'Details'}</span>
+                      <span className="text-sm">
+                        {project.title === 'Calculus Optimization of 200m Freestyle' ? 'Download' :
+                         project.title === 'Smart Vase' || project.title === 'TeleSwitch (WiFi & SMS)' ? 'Presentation' : 'Details'}
+                      </span>
                     </a>
                     <a
                       href={project.githubUrl}
