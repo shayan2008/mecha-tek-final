@@ -78,7 +78,7 @@ const Projects = () => {
       category: 'IoT',
       liveUrl: '#',
       githubUrl: 'https://github.com/shayan2008/',
-      presentationUrl: '/TeleSwitch.pdf'
+      presentationUrl: '/Tele_Switch_Final_EN.pdf'
     },
     {
       title: 'Smart Vase',
@@ -88,7 +88,7 @@ const Projects = () => {
       category: 'IoT',
       liveUrl: '#',
       githubUrl: 'https://github.com/shayan2008/',
-      presentationUrl: '/Smart Vase.pdf'
+      presentationUrl: '/Smart_Vase_Beautified_EN.pptx%20-%20Repaired.pdf'
     },
     {
       title: 'Coin Cabin',
@@ -190,7 +190,7 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <div key={index} className="bg-slate-900/50 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+              <div key={index} className="bg-slate-900/50 rounded-lg overflow-hidden hover:transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300">
                 <div className="relative overflow-hidden h-48">
                   {Array.isArray(project.image) ? (
                     <div className="flex overflow-x-auto snap-x snap-mandatory h-full">
@@ -264,6 +264,17 @@ const Projects = () => {
                       >
                         <Presentation size={16} />
                         <span className="text-sm">Presentation</span>
+                      </a>
+                    )}
+                    {project.websiteUrl && (
+                      <a
+                        href={project.websiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-200"
+                      >
+                        <ExternalLink size={16} />
+                        <span className="text-sm">Website</span>
                       </a>
                     )}
                   </div>

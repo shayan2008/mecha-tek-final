@@ -43,6 +43,11 @@ const Certificates = () => {
           issuer: 'Swim Canada'
         },
         {
+          name: 'NCCP 101 Swim canada certified',
+          details: 'National Coaching Certification Program',
+          issuer: 'Swim Canada'
+        },
+        {
           name: 'Standard First Aid & CPR-C',
           details: 'Emergency response training',
           issuer: 'Red Cross'
