@@ -10,7 +10,7 @@ const Awards = () => {
       year: '2025',
       category: 'Robotics',
       color: 'text-red-400',
-      image: 'Team Canada Mayor Recognition.jpg'
+      image: ['Team Canada Mayor Recognition.jpg', 'Mayor Recognition.jpg', 'Mayor Recognition - Copy.jpg']
     },
     {
       icon: <Trophy size={24} />,
@@ -19,7 +19,7 @@ const Awards = () => {
       year: '2024',
       category: 'Robotics',
       color: 'text-yellow-400',
-      image: 'Fira 1st place autonomous .jpg'
+      image: ['Fira 1st place autonomous .jpg', 'Fira 1st place autonomous  - Copy.jpg', 'Fira First place DRC.jpg', 'Fira First place DRC - Copy.jpg', 'Fira_ cup.jpg', 'Fira_ cup copy.jpg', 'Fira_ cup copy copy.jpg']
     },
     {
       icon: <Medal size={24} />,
@@ -37,7 +37,7 @@ const Awards = () => {
       year: '2024',
       category: 'Robotics',
       color: 'text-blue-400',
-      image: 'Innavtion award.jpg'
+      image: ['Innavtion award.jpg', 'Innavtion award - Copy.jpg']
     },
     {
       icon: <Award size={24} />,
@@ -46,7 +46,7 @@ const Awards = () => {
       year: '2024',
       category: 'Robotics',
       color: 'text-orange-400',
-      image: 'CETA.jpg'
+      image: ['CETA.jpg', 'CETA - Copy.jpg']
     },
     {
       icon: <Medal size={24} />,
@@ -55,7 +55,7 @@ const Awards = () => {
       year: '2024',
       category: 'Science',
       color: 'text-gray-400',
-      image: 'Medport.jpg'
+      image: ['Medport.jpg', 'Medport _ SienceFair.jpg', 'Medport _ SienceFair copy.jpg', 'Medport _ SienceFair copy copy.jpg']
     },
     {
       icon: <Trophy size={24} />,
@@ -73,7 +73,7 @@ const Awards = () => {
       year: '2024',
       category: 'Academic',
       color: 'text-purple-400',
-      image: 'City of vancovour recognition.jpg'
+      image: ['City of vancovour recognition.jpg', 'City of vancovour recognition - Copy.jpg']
     },
     {
       icon: <Zap size={24} />,
@@ -126,7 +126,7 @@ const Awards = () => {
       year: '2025',
       category: 'Robotics',
       color: 'text-orange-400',
-      image: 'super team 1st place.jpg'
+      image: ['super team 1st place.jpg', '3rd place in worlds.jpg']
     }
   ];
 
@@ -183,9 +183,28 @@ const Awards = () => {
                       {award.description}
                     </p>
                     {award.image && (
-                      <img src={award.image} alt={award.title} className="mt-2 rounded-lg" />
+                      <div className="relative mt-2 rounded-lg overflow-hidden h-48">
+                        {Array.isArray(award.image) ? (
+                          <div className="flex overflow-x-auto snap-x snap-mandatory h-full">
+                            {award.image.map((img, i) => (
+                              <img
+                                key={i}
+                                src={img}
+                                alt={`${award.title} ${i + 1}`}
+                                className="w-full h-full object-cover snap-center flex-shrink-0"
+                              />
+                            ))}
+                          </div>
+                        ) : (
+                          <img
+                            src={award.image}
+                            alt={award.title}
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                      </div>
                     )}
-                    <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
+                    <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium mt-4 ${
                       award.category === 'Robotics' ? 'bg-blue-600/20 text-blue-400' :
                       award.category === 'Science' ? 'bg-green-600/20 text-green-400' :
                       award.category === 'Academic' ? 'bg-purple-600/20 text-purple-400' :

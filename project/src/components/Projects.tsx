@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Presentation } from 'lucide-react';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -77,7 +77,8 @@ const Projects = () => {
       technologies: ['ESP32', 'WiFi', 'SMS API', 'Mobile App'],
       category: 'IoT',
       liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      githubUrl: 'https://github.com/shayan2008/',
+      presentationUrl: '/TeleSwitch.pdf'
     },
     {
       title: 'Smart Vase',
@@ -86,7 +87,8 @@ const Projects = () => {
       technologies: ['Arduino', 'Sensors', 'IoT', 'Mobile App'],
       category: 'IoT',
       liveUrl: '#',
-      githubUrl: 'https://github.com/shayan2008/'
+      githubUrl: 'https://github.com/shayan2008/',
+      presentationUrl: '/Smart Vase.pdf'
     },
     {
       title: 'Coin Cabin',
@@ -249,6 +251,17 @@ const Projects = () => {
                       <Github size={16} />
                       <span className="text-sm">Code</span>
                     </a>
+                    {project.presentationUrl && (
+                      <a
+                        href={project.presentationUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors duration-200"
+                      >
+                        <Presentation size={16} />
+                        <span className="text-sm">Presentation</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
