@@ -88,7 +88,7 @@ const Projects = () => {
       category: 'IoT',
       liveUrl: '#',
       githubUrl: 'https://github.com/shayan2008/',
-      presentationUrl: '/Smart_Vase_Beautified_EN.pptx%20-%20Repaired.pdf'
+      presentationUrl: '/Smart_Vase_Beautified_EN_pptx-Repaired.pdf'
     },
     {
       title: 'Coin Cabin',
