@@ -17,7 +17,8 @@ const Certificates = () => {
         {
           name: 'Altium Designer PCB Design Certificate',
           details: 'Advanced PCB design and layout',
-          issuer: 'Altium'
+          issuer: 'Altium',
+          image: 'Robot line followe design.png'
         },
         {
           name: 'STM32 Microcontroller Programming',
@@ -62,6 +63,12 @@ const Certificates = () => {
           name: 'Google Digital Marketing Certificate',
           details: 'Digital marketing fundamentals',
           issuer: 'Google'
+        },
+        {
+            name: 'Toronto Science Fair Participation',
+            details: 'Participation in the City of Toronto\'s annual Science Fair.',
+            issuer: 'Toronto Science Fair',
+            image: 'toronto Science Fair participation.jpg'
         }
       ]
     }

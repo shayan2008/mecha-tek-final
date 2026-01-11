@@ -10,5 +10,9 @@ test('homepage has expected content and saves a screenshot', async ({ page }) =>
   // Wait for any images to load (optional but good practice)
   await page.waitForLoadState('networkidle');
 
-  await page.screenshot({ path: 'screenshot.png' });
+  // Verify that the certificate image is visible
+  const certificateImage = page.locator('img[alt="Mechatronics Course Certificate"]');
+  await expect(certificateImage).toBeVisible();
+
+  await page.screenshot({ path: 'screenshot.png', fullPage: true });
 });

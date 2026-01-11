@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Medal, Award, Star, Globe, Zap } from 'lucide-react';
+import { Trophy, Medal, Award, Globe, Zap } from 'lucide-react';
 
 const Awards = () => {
   const awards = [
@@ -9,7 +9,8 @@ const Awards = () => {
       description: 'Selected to represent Canada in international robotics competitions.',
       year: '2025',
       category: 'Robotics',
-      color: 'text-red-400'
+      color: 'text-red-400',
+      image: 'Team Canada Mayor Recognition.jpg'
     },
     {
       icon: <Trophy size={24} />,
@@ -17,7 +18,8 @@ const Awards = () => {
       description: 'First place victories in FIRA RoboCup Canada competitions',
       year: '2024',
       category: 'Robotics',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
+      image: 'Fira 1st place autonomous .jpg'
     },
     {
       icon: <Medal size={24} />,
@@ -25,15 +27,17 @@ const Awards = () => {
       description: 'Rescue Simulation + Super Team categories',
       year: '2024',
       category: 'Robotics',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
+      image: 'Robo cup us open 2nd place.jpg'
     },
     {
-      icon: <Globe size={24} />,
-      title: 'FIRA World Championships and Robocup World Championships Qualifier',
-      description: 'Qualified for Korea & Brazil 2025',
-      year: '2025',
+      icon: <Award size={24} />,
+      title: 'Innovation Award',
+      description: 'Recognized for innovative design and problem-solving.',
+      year: '2024',
       category: 'Robotics',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
+      image: 'Innavtion award.jpg'
     },
     {
       icon: <Award size={24} />,
@@ -41,7 +45,8 @@ const Awards = () => {
       description: 'IoT Challenge category',
       year: '2024',
       category: 'Robotics',
-      color: 'text-orange-400'
+      color: 'text-orange-400',
+      image: 'CETA.jpg'
     },
     {
       icon: <Medal size={24} />,
@@ -49,7 +54,8 @@ const Awards = () => {
       description: 'MedPort medication tracking system',
       year: '2024',
       category: 'Science',
-      color: 'text-gray-400'
+      color: 'text-gray-400',
+      image: 'Medport.jpg'
     },
     {
       icon: <Trophy size={24} />,
@@ -57,15 +63,17 @@ const Awards = () => {
       description: 'TeleSwitch IoT project',
       year: '2024',
       category: 'Robotics',
-      color: 'text-orange-400'
+      color: 'text-orange-400',
+      image: 'Participation Mossit.jpg'
     },
     {
-      icon: <Star size={24} />,
-      title: 'SHAD Canada 2025',
-      description: 'Admitted (declined due to conflict)',
-      year: '2025',
+      icon: <Award size={24} />,
+      title: 'City of Vancouver Recognition',
+      description: 'Acknowledged for contributions to the community.',
+      year: '2024',
       category: 'Academic',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
+      image: 'City of vancovour recognition.jpg'
     },
     {
       icon: <Zap size={24} />,
@@ -73,7 +81,8 @@ const Awards = () => {
       description: 'Ontario Association of Physics Teachers',
       year: '2024',
       category: 'Academic',
-      color: 'text-green-400'
+      color: 'text-green-400',
+      image: 'OAPT.jpg'
     },
     {
       icon: <Trophy size={24} />,
@@ -81,7 +90,8 @@ const Awards = () => {
       description: 'Swimming competition',
       year: '2024',
       category: 'Athletics',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
+      image: 'Medals.jpg'
     },
     {
       icon: <Medal size={24} />,
@@ -89,15 +99,17 @@ const Awards = () => {
       description: 'Regional swimming championship',
       year: '2024',
       category: 'Athletics',
-      color: 'text-orange-400'
+      color: 'text-orange-400',
+      image: 'Medals - Copy.jpg'
     },
     {
-      icon: <Trophy size={24} />,
-      title: 'Jim Mason Squash Cup',
-      description: 'Undefeated season',
-      year: '2024',
-      category: 'Athletics',
-      color: 'text-yellow-400'
+        icon: <Award size={24} />,
+        title: 'Merit Award',
+        description: 'Awarded for outstanding academic achievement.',
+        year: '2024',
+        category: 'Academic',
+        color: 'text-yellow-400',
+        image: 'Merit Award.jpg'
     },
     {
       icon: <Trophy size={24} />,
@@ -113,7 +125,8 @@ const Awards = () => {
       description: 'World Cup Fira in South Korea',
       year: '2025',
       category: 'Robotics',
-      color: 'text-orange-400'
+      color: 'text-orange-400',
+      image: 'super team 1st place.jpg'
     }
   ];
 
@@ -169,6 +182,9 @@ const Awards = () => {
                     <p className="text-slate-300 text-sm mb-3">
                       {award.description}
                     </p>
+                    {award.image && (
+                      <img src={award.image} alt={award.title} className="mt-2 rounded-lg" />
+                    )}
                     <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
                       award.category === 'Robotics' ? 'bg-blue-600/20 text-blue-400' :
                       award.category === 'Science' ? 'bg-green-600/20 text-green-400' :
