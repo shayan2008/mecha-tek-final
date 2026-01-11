@@ -28,7 +28,7 @@ const Projects = () => {
     {
       title: 'Autonomous Car (Jetson Nano)',
       description: 'Designed for obstacle avoidance, object detection, and real-time lane correction. Uses Python and OpenCV on the Jetson Nano platform for deep-learning vision integration.',
-      image: 'https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/assets/autonomous-car.jpg',
       technologies: ['Jetson Nano', 'Python', 'OpenCV', 'Deep Learning'],
       category: 'AI',
       liveUrl: 'https://github.com/shayan2008/Portfolio',
