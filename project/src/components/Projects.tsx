@@ -76,7 +76,7 @@ const Projects = () => {
       image: ['/TeleSwitch circuit.png', '/TeleSwitch sim.png', '/Teleswitch schmeatic.png'],
       technologies: ['ESP32', 'WiFi', 'SMS API', 'Mobile App'],
       category: 'IoT',
-      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      liveUrl: '/Tele_Switch_Final_EN.pptx',
       githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
@@ -85,7 +85,7 @@ const Projects = () => {
       image: ['/smart_vase.jpg', '/Smart Vase.jpg', '/Smart Vase2.jpg', '/Smart Vaseapp.jpg'],
       technologies: ['Arduino', 'Sensors', 'IoT', 'Mobile App'],
       category: 'IoT',
-      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      liveUrl: '/Smart_Vase_Beautified_EN_CLEAN.pptx',
       githubUrl: 'https://github.com/shayan2008/Portfolio'
     },
     {
@@ -239,7 +239,10 @@ const Projects = () => {
                       className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                     >
                       <ExternalLink size={16} />
-                      <span className="text-sm">{project.title === 'Calculus Optimization of 200m Freestyle' ? 'Download' : 'Details'}</span>
+                      <span className="text-sm">
+                        {project.title === 'Calculus Optimization of 200m Freestyle' ? 'Download' :
+                         project.title === 'Smart Vase' || project.title === 'TeleSwitch (WiFi & SMS)' ? 'Presentation' : 'Details'}
+                      </span>
                     </a>
                     <a
                       href={project.githubUrl}
