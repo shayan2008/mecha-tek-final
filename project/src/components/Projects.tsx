@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Presentation } from 'lucide-react';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -76,8 +76,9 @@ const Projects = () => {
       image: ['/TeleSwitch circuit.png', '/TeleSwitch sim.png', '/Teleswitch schmeatic.png'],
       technologies: ['ESP32', 'WiFi', 'SMS API', 'Mobile App'],
       category: 'IoT',
-      liveUrl: '/Tele_Switch_Final_EN.pptx',
-      githubUrl: 'https://github.com/shayan2008/Portfolio'
+      liveUrl: '#',
+      githubUrl: 'https://github.com/shayan2008/',
+      presentationUrl: '/TeleSwitch.pdf'
     },
     {
       title: 'Smart Vase',
@@ -85,8 +86,9 @@ const Projects = () => {
       image: ['/smart_vase.jpg', '/Smart Vase.jpg', '/Smart Vase2.jpg', '/Smart Vaseapp.jpg'],
       technologies: ['Arduino', 'Sensors', 'IoT', 'Mobile App'],
       category: 'IoT',
-      liveUrl: '/Smart_Vase_Beautified_EN_CLEAN.pptx',
-      githubUrl: 'https://github.com/shayan2008/Portfolio'
+      liveUrl: '#',
+      githubUrl: 'https://github.com/shayan2008/',
+      presentationUrl: '/Smart Vase.pdf'
     },
     {
       title: 'Coin Cabin',
@@ -253,15 +255,15 @@ const Projects = () => {
                       <Github size={16} />
                       <span className="text-sm">Code</span>
                     </a>
-                    {project.websiteUrl && (
+                    {project.presentationUrl && (
                       <a
-                        href={project.websiteUrl}
+                        href={project.presentationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                        className="flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors duration-200"
                       >
-                        <ExternalLink size={16} />
-                        <span className="text-sm">Website</span>
+                        <Presentation size={16} />
+                        <span className="text-sm">Presentation</span>
                       </a>
                     )}
                   </div>
