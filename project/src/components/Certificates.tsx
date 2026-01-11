@@ -10,7 +10,7 @@ const Certificates = () => {
       certificates: [
         {
           name: 'Mechatronics Course Certificate',
-          details: '100+ hours of comprehensive training',
+          details: '500+ hours of comprehensive training',
           issuer: 'Professional Development',
           image: 'Mechatronic Course.png',
         },
