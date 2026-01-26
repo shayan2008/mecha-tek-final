@@ -63,6 +63,13 @@ const Leadership = () => {
 
   const workExperience = [
     {
+      title: 'Software/AI Intern',
+      organization: 'Next Inc (nextchat.ca)',
+      period: '01/2026 - Present',
+      description: 'Contributing to a media automation pipeline that converts research into narrated audio (WAV/MP3) and 1080p MP4 videos with embedded subtitles.',
+      skills: ['AI', 'Automation', 'Media Processing']
+    },
+    {
       title: 'Swim Instructor / Lifeguard / Lifesaving Instructor',
       organization: 'City of Toronto',
       period: '04/2024 - Present',

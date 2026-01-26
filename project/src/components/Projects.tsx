@@ -8,6 +8,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Automated Financial Podcast',
+      description: 'Building an end-to-end system that transforms research notes into professional media. The workflow automates script generation, high-quality audio narration, and YouTube-ready 1080p video export with subtitles and visuals.',
+      image: 'https://images.pexels.com/photos/6801811/pexels-photo-6801811.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['AI', 'Automation', 'Media Pipeline', 'Python'],
+      category: 'AI',
+      liveUrl: 'https://github.com/shayan2008/Portfolio',
+      githubUrl: 'https://github.com/shayan2008/Portfolio'
+    },
+    {
       title: 'Swim Track',
       description: 'Swim Results Dashboard (JavaFX)\nA small JavaFX app that lets you enter swimmers, add their race results, and instantly see simple analytics (Top-5 bar chart, personal trend line, and event distribution pie). It’s intentionally lightweight (no database) so it runs easily in IntelliJ.',
       image: '/swimtrack.png',
