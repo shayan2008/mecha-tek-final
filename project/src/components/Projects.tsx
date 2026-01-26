@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: 'Automated Financial Podcast',
       description: 'Building an end-to-end system that transforms research notes into professional media. The workflow automates script generation, high-quality audio narration, and YouTube-ready 1080p video export with subtitles and visuals.',
-      image: 'https://images.pexels.com/photos/6801811/pexels-photo-6801811.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/pipline.png',
       technologies: ['AI', 'Automation', 'Media Pipeline', 'Python'],
       category: 'AI',
       liveUrl: 'https://github.com/shayan2008/Portfolio',
@@ -102,7 +102,7 @@ const Projects = () => {
     {
       title: 'Coin Cabin',
       description: 'Hackathon-built AI-powered budgeting and financial literacy tool. Integrates OpenAI\'s GPT to provide spending advice, budgeting strategy, and financial coaching.',
-      image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/coin cabin.jpg',
       technologies: ['OpenAI GPT', 'Python', 'React', 'API Integration'],
       category: 'Apps',
       liveUrl: 'https://github.com/shayan2008/ignition_hacks',
