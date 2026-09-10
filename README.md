@@ -1,47 +1,28 @@
-# 🌐 Shayan Doroudiani – Personal Portfolio Website
+# mecha-tek.com
 
-Welcome to the GitHub repository for my personal website, showcasing my projects, achievements, technical skills, and athletic leadership. This website is built to highlight my work in robotics, AI, mechatronics, and more.
+Source for my portfolio site — robotics and embedded projects, competition results, certificates and write-ups.
 
-![Website Screenshot](screenshot.png) <!-- Optional: replace with actual screenshot file path -->
+Live at **[mecha-tek.com](https://mecha-tek.com)**.
 
-## 🚀 Live Demo
+## Stack
 
-🌎 [Visit Website](https://mecha-tek.com)
+TypeScript, deployed on Netlify (`netlify.toml`). Application source is in `project/`.
 
----
-
-## 📄 About
-
-This website serves as my interactive portfolio. It includes:
-
-- 🔬 **Projects:** Over 12 featured projects across Robotics, AI, Embedded Systems, IoT, and Software.
-- 🏆 **Awards & Achievements:** National and international competition wins including RoboCup, FIRA, and science fairs.
-- 🏊‍♂️ **Leadership & Athletics:** Competitive swimming, squash, and frisbee highlights with team leadership roles.
-- 💼 **Experience & Certifications:** Swim coach, lifeguard, STEM mentor, and certified mechatronics student.
-
----
-
-## 🛠 Tech Stack
-
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla or React – depending on implementation)
-- **Framework (optional):** React.js + TailwindCSS or Bootstrap
-- **Hosting:** Netlify / Vercel / GitHub Pages
-- **Design Tools:** Figma, Canva, or custom UI components
-- **Assets:** Project images, resume PDFs, and external GitHub embeds
-
----
-
-## 📦 Setup Instructions
-
-To run locally:
+## Development
 
 ```bash
-git clone https://github.com/shayan2008/personal-website.git
-cd personal-website
-
-# If using plain HTML/CSS:
-open index.html
-
-# If using Node.js (React)
+cd project
 npm install
-npm start
+npm run dev
+```
+
+## Repository layout
+
+| Path | Contents |
+| --- | --- |
+| `project/` | Site source |
+| `test-results/` | Test output |
+| `netlify.toml` | Deploy configuration |
+| `screenshot.png` | Homepage preview |
+
+Maintained by [Shayan Doroudiani](https://github.com/shayan2008).
