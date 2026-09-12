@@ -1,34 +1,38 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Awards from './components/Awards';
-import Leadership from './components/Leadership';
-import Certificates from './components/Certificates';
-import Gallery from './components/Gallery';
-import Research from './components/Research';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-
+import { useRef, useState } from 'react';
+import { ArrowUpRight, ArrowDown, Menu, X, Plus } from 'lucide-react';
+import { projects, awards, experience, gallery, links } from './content';
+const asset = (path: string) => path.startsWith('/') ? encodeURI(path) : path;
 function App() {
-  return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Awards />
-        <Leadership />
-        <Certificates />
-        <Gallery />
-        <Research />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
+  const [menu, setMenu] = useState(false);
+  const [filter, setFilter] = useState('All');
+  const [expanded, setExpanded] = useState(false);
+  const [photo, setPhoto] = useState<string[]>([]);
+  const modal = useRef<HTMLDialogElement>(null);
+  const openPhoto = (src: string, caption: string) => { setPhoto([src, caption]); modal.current?.showModal(); };
+  const visible = projects.filter(p => (expanded || p.featured) && (filter === 'All' || p.category === filter));
+  return <>
+    <a className="skip" href="#main">Skip to content</a>
+    <header><a href="#home" className="wordmark" aria-label="Mecha Tek home">MECHA<span>TEK</span><i /></a><button className="menu-toggle" aria-label={menu ? 'Close navigation' : 'Open navigation'} aria-expanded={menu} onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button><nav className={menu ? 'open' : ''} aria-label="Main navigation">{[['projects', 'Work'], ['about', 'About'], ['leadership', 'Experience'], ['awards', 'Recognition']].map(([id, label]) => <a key={id} href={'#' + id} onClick={() => setMenu(false)}>{label}</a>)}<a className="nav-contact" href="#contact" onClick={() => setMenu(false)}>Get in touch <ArrowUpRight size={16} /></a></nav></header>
+    <main id="main">
+      <section className="hero wrap" id="home">
+        <div className="hero-top"><span className="eyebrow">Shayan Doroudiani</span><span className="eyebrow">Toronto, Canada / EngSci 3T0</span></div>
+        <div className="hero-grid"><div><h1>From code<br />to the <em>real world.</em></h1><p className="intro">I’m Shayan, an Engineering Science student at the University of Toronto. I build robots, connected devices and software shaped by the things I do.</p><div className="hero-actions"><a className="button" href="#projects">Explore my work <ArrowDown size={18} /></a><a className="text-link" href={links.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={17} /></a></div></div><figure className="hero-photo"><img src={asset('/Medport _ SienceFair copy copy.jpg')} alt="Shayan and Tom Zhang presenting their MedPort prototype at the Toronto Science Fair" /><figcaption><span>MedPort / Toronto Science Fair</span><span>01</span></figcaption></figure></div>
+        <div className="hero-note"><span className="eyebrow">Latest milestone</span><p>2026 RoboCupJunior World Cup<br /><strong>Rescue Simulation SuperTeam · 1st with Kavosh</strong></p><a href="#awards" aria-label="See competition results"><ArrowUpRight /></a></div>
+      </section>
+      <section className="work section wrap" id="projects"><div className="section-heading"><div><span className="eyebrow">01 / Selected projects</span><h2>Things I’ve built.</h2></div><p>Robotics, software and the hardware<br className="desktop" /> that connects them.</p></div>
+        {expanded && <div className="filters" aria-label="Filter projects">{['All', 'Robotics', 'Hardware', 'Software'].map(f => <button key={f} aria-pressed={filter === f} onClick={() => setFilter(f)}>{f}</button>)}</div>}
+        <div className="project-list">{visible.map((p) => <article className="project" key={p.title}><div className={'project-image ' + (p.title === 'Rescue Simulation' ? 'trophy' : '')}>{p.image ? <button onClick={() => openPhoto(p.image!, p.title)} aria-label={'Enlarge ' + p.title + ' image'}><img src={asset(p.image)} alt={p.title + ' project'} loading="lazy" /></button> : <div className="project-type"><span>{p.category}</span><strong>{p.title}</strong></div>}</div><div className="project-copy"><span className="eyebrow">{p.type}</span><h3>{p.title}</h3><p>{p.description}</p><ul className="tags">{p.tags.map(t => <li key={t}>{t}</li>)}</ul><details><summary>Project details <Plus size={16} /></summary><p>{p.detail}</p></details><a className="text-link" href={asset(p.url)} target="_blank" rel="noreferrer">{p.label} <ArrowUpRight size={18} /></a></div></article>)}</div>
+        <button className="archive-button" onClick={() => {setExpanded(!expanded); setFilter('All');}} aria-expanded={expanded}>{expanded ? 'Show selected projects' : `Explore all ${projects.length} projects`} <span>{expanded ? '−' : '+'}</span></button>
+      </section>
+      <section className="about section" id="about"><div className="wrap about-grid"><div><span className="eyebrow">02 / A little context</span><h2>Engineer in training.<br /><em>Builder by habit.</em></h2><img className="portrait" src="/profile-placeholder.png" alt="Portrait of Shayan Doroudiani" loading="lazy" /></div><div className="about-copy"><p className="large-copy">I like work that crosses the boundary between a program and a physical thing.</p><p>That has taken me from rescue robots with Kavosh to MedPort’s electronics and mechanical design, and from competitive swimming to building LaneLab for coaches.</p><p>I moved from Iran to Canada in Grade 10 and graduated from Earl Haig Secondary School in 2026. I’m now in my first year of Engineering Science at U of T, exploring robotics, embedded systems and machine intelligence.</p><div className="skills"><div><h3>Software & vision</h3><p>Python, C / C++, Java, React, TypeScript, OpenCV, YOLO</p></div><div><h3>Hardware & design</h3><p>Arduino, ESP32, STM32, NVIDIA Jetson, SolidWorks, Fusion 360, PCB design</p></div></div><a className="text-link" href="/resume-2026.html" target="_blank" rel="noreferrer">View / print résumé <ArrowUpRight size={18} /></a></div></div></section>
+      <section className="section wrap" id="leadership"><div className="section-heading"><div><span className="eyebrow">03 / Experience</span><h2>Building. Teaching. Leading.</h2></div></div><div className="experience">{experience.map(([date, title, org, description]) => <article key={title}><span className="eyebrow date">{date}</span><div><h3>{title}</h3><span className="organization">{org}</span></div><p>{description}</p></article>)}</div>
+        <div className="school"><h3>At Earl Haig</h3><div><p><strong>Robotics Club President, 2025–26.</strong> Previously co-president and lead designer. Expanded the club to 40+ members and four weekly meetings, founded its VEX team and AI division, and coordinated software, hardware and design work.</p><p><strong>Science Fair Manager, 2025–26.</strong> Science Society. Also served as a Hack Club Executive Trainer in 2024–25.</p><p><strong>Swim Team Head Captain, 2025–26.</strong> Previously Open Boys Captain. OFSAA qualifier, with regional medals and a city silver. Ultimate Frisbee results include regional first and city second.</p></div></div>
+      </section>
+      <section className="recognition section" id="awards"><div className="wrap"><div className="section-heading"><div><span className="eyebrow">04 / Recognition</span><h2>Results, with the record.</h2></div><p>Individual recognition and team achievements,<br className="desktop" /> with original images where available.</p></div><div className="awards">{awards.slice(0, 5).map(([year, title, event, img]) => <div className="award" key={title}><span className="eyebrow">{year}</span><div><h3>{title}</h3><p>{event}</p></div>{img && <button aria-label={'View evidence for ' + title} onClick={() => openPhoto(img, title + ' · ' + event)}><ArrowUpRight /></button>}</div>)}</div><details className="more-awards"><summary>More awards & recognition <Plus size={20} /></summary>{awards.slice(5).map(([year,title,event,img]) => <div className="award" key={title}><span className="eyebrow">{year}</span><div><h3>{title}</h3><p>{event}</p></div>{img && <button aria-label={'View evidence for '+title} onClick={() => openPhoto(img,title+' · '+event)}><ArrowUpRight /></button>}</div>)}<p className="evidence-note">Original images retain their printed wording. The 2025 US Open SuperTeam certificate identifies the event without a placement; the NYAC trophy reads “Merit Award, Senior B Group.” The titles above reflect my competition and club record.</p></details><div className="recognition-notes"><div><h3>CAYIA 2026</h3><p>Participated with LaneLab, working on engineering and coaching workflows alongside Yichen Liu on product, design and communication.</p></div><div id="certificates"><h3>Training & qualifications</h3><p>National Lifeguard, Standard First Aid / CPR-C, Swim Instructor, Lifesaving Instructor and NCCP Swimming 101. Also completed a 500-hour mechatronics course.</p><a className="text-link" href={asset('/Mechatronic Course - Copy.png')} target="_blank" rel="noreferrer">Mechatronics certificate <ArrowUpRight size={16} /></a></div></div></div></section>
+      <section className="section wrap" id="gallery"><div className="section-heading"><div><span className="eyebrow">05 / In the workshop & beyond</span><h2>The work behind the work.</h2></div></div><div className="gallery">{gallery.map(([src,caption]) => <button key={src} onClick={() => openPhoto(src,caption)}><img src={asset(src)} alt={caption} loading="lazy" /><span>{caption} <ArrowUpRight size={16} /></span></button>)}</div><div className="swimming" id="research"><span className="eyebrow">Outside the workshop</span><p>I’m still a competitive swimmer and coach at NYAC, where I was named Swimmer of the Year for 2024–25. Away from the pool, I enjoy philosophy, reading, chess and exploring how mathematics describes the world.</p><a className="text-link" href="https://github.com/shayan2008/Calculus-Optimization-of-200-Free" target="_blank" rel="noreferrer">My freestyle pacing study <ArrowUpRight size={17} /></a></div></section>
+      <section className="contact section" id="contact"><div className="wrap contact-grid"><div><span className="eyebrow">06 / Contact</span><h2>Have something<br />in mind?</h2><p>I’m interested in robotics, software and embedded systems opportunities, and in meeting people who like to build.</p><a className="contact-email" href={links.email}>shayan.doroud86@gmail.com <ArrowUpRight size={22} /></a><div className="socials"><a href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={16} /></a><a href={links.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={16} /></a><a href="/resume-2026.html" target="_blank" rel="noreferrer">Résumé <ArrowUpRight size={16} /></a></div></div><form onSubmit={e => {e.preventDefault(); const data = new FormData(e.currentTarget); window.location.href = links.email + '?subject=' + encodeURIComponent('Portfolio inquiry from ' + data.get('name')) + '&body=' + encodeURIComponent(`${data.get('message')}\n\nFrom: ${data.get('name')}\nReply to: ${data.get('email')}`);}}><label htmlFor="name">Your name</label><input id="name" name="name" required autoComplete="name" /><label htmlFor="email">Email</label><input id="email" name="email" type="email" required autoComplete="email" /><label htmlFor="message">What are you working on?</label><textarea id="message" name="message" rows={3} required /><button className="button" type="submit">Open email draft <ArrowUpRight size={18} /></button><p className="form-note">Opens your email app with a draft. You send it from there.</p></form></div></section>
+    </main><footer className="wrap"><a className="wordmark" href="#home">MECHA<span>TEK</span><i /></a><p>© {new Date().getFullYear()} Shayan Doroudiani</p><a href="#home">Back to top ↑</a></footer>
+    <dialog ref={modal} onClick={e => {if (e.target === e.currentTarget) modal.current?.close();}}><div className="dialog-bar"><p>{photo[1]}</p><button aria-label="Close image" onClick={() => modal.current?.close()}><X /></button></div>{photo[0] && <img src={asset(photo[0])} alt={photo[1]} />}<a href={asset(photo[0] || '#')} target="_blank" rel="noreferrer">Open original image <ArrowUpRight size={16} /></a></dialog>
+  </>;
 }
-
 export default App;

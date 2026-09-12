@@ -1,28 +1,39 @@
-# mecha-tek.com
+# Mecha Tek
 
-Source for my portfolio site: robotics and embedded projects, competition results, certificates and write-ups.
+Shayan Doroudiani’s portfolio at [mecha-tek.com](https://mecha-tek.com).
 
-Live at **[mecha-tek.com](https://mecha-tek.com)**.
+React, TypeScript and Vite. Hosted on Netlify; application root: `project/`.
 
-## Stack
-
-TypeScript, deployed on Netlify (`netlify.toml`). Application source is in `project/`.
-
-## Development
+## Run locally
 
 ```bash
 cd project
-npm install
+npm ci
 npm run dev
 ```
 
-## Repository layout
+## Validate and build
 
-| Path | Contents |
-| --- | --- |
-| `project/` | Site source |
-| `test-results/` | Test output |
-| `netlify.toml` | Deploy configuration |
-| `screenshot.png` | Homepage preview |
+```bash
+npx tsc --noEmit -p tsconfig.app.json
+npm run lint
+npm run build
+```
 
-Maintained by [Shayan Doroudiani](https://github.com/shayan2008).
+## Edit content
+
+- `project/src/content.ts`: projects, experience, awards, profile links and gallery.
+- `project/src/App.tsx`: page structure and biography.
+- `project/src/index.css`: typography, layout, responsive styles and colours.
+- `project/public/resume-2026.html`: current printable résumé; use the page’s Print / Save as PDF button.
+
+The original `project/public` files are preserved byte-for-byte. Old résumé PDFs remain available at their existing URLs, but the site links to the updated résumé. New assets are additive.
+
+## Publish a downloaded copy
+
+1. Clone `https://github.com/shayan2008/mecha-tek-final.git`, or open your existing checkout.
+2. Copy the updated project files from the ZIP into it. Keep its `.git` folder. Follow `PUSH-INSTRUCTIONS.md` to remove replaced source components.
+3. Run the validation commands above.
+4. Review `git diff` and push. Netlify’s connected main branch should build automatically.
+
+The other repository, `shayan2008/mecha-tek`, is an older separate implementation.
