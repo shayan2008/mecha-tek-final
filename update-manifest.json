@@ -1,0 +1,50 @@
+{
+  "repository": "shayan2008/mecha-tek-final",
+  "baseCommit": "8f93dfaebb62269a5d507548ab8b3ba0d50aeb63",
+  "files": [
+    {
+      "path": "README.md",
+      "baseBlob": "26f63de8ee08b6edd55ec299680938499ff9a698"
+    },
+    {
+      "path": "PUSH-INSTRUCTIONS.md",
+      "baseBlob": "a48e05a50a335a3f03130b94a1c555f12327ed9b"
+    },
+    {
+      "path": "project/package.json",
+      "baseBlob": "38ccbbf002b15c1f70f1fa1e7f4b15a7c647cccc"
+    },
+    {
+      "path": "project/package-lock.json",
+      "baseBlob": "4d2c6056950d567c03083509fbb748f6d38ca8af"
+    },
+    {
+      "path": "project/src/App.tsx",
+      "baseBlob": "82d7954e0eeead5aa00c72f82ac3db2ef4c66608"
+    },
+    {
+      "path": "project/src/content.ts",
+      "baseBlob": "b8dbc493121710f54a80dc2c3548837de2cf6e2b"
+    },
+    {
+      "path": "project/src/index.css",
+      "baseBlob": "a0c4abfc367d9e0bb72bc3032aaea31e8086502d"
+    },
+    {
+      "path": "project/src/components/MotionStudy.tsx",
+      "baseBlob": null
+    },
+    {
+      "path": "project/src/components/ProjectVisuals.tsx",
+      "baseBlob": null
+    },
+    {
+      "path": "PUBLISH.ps1",
+      "baseBlob": null
+    },
+    {
+      "path": "update-manifest.json",
+      "baseBlob": null
+    }
+  ]
+}

@@ -1,27 +1,42 @@
-# Updating Mecha Tek from this ZIP
+# Publish with PowerShell
 
-If the redesign is already on GitHub, simply run `git pull` in your existing `mecha-tek-final` checkout.
+1. Extract the ZIP fully.
+2. Open its `mecha-tek-final` folder. It contains `PUBLISH.ps1`, `update-manifest.json` and the `project` folder.
+3. Right-click inside the folder and choose **Open in Terminal** (PowerShell).
+4. Run:
 
-Otherwise:
-
-1. Unzip the download.
-2. Clone `https://github.com/shayan2008/mecha-tek-final.git` with GitHub Desktop, or use your existing local clone.
-3. Copy the ZIP’s `project`, `README.md`, `PUSH-INSTRUCTIONS.md` and `netlify.toml` over that clone, replacing matching files. Do not replace the clone’s `.git` folder. Do not delete `project/public`.
-4. Delete the old `project/src/components` folder. Those components are replaced by the new `App.tsx` and `content.ts`; none are imported anymore.
-5. In a terminal inside the clone:
-
-```bash
-cd project
-npm ci
-npx tsc --noEmit -p tsconfig.app.json
-npm run lint
-npm run build
-cd ..
-git add project/src project/index.html project/public/portfolio project/public/resume-2026.html README.md PUSH-INSTRUCTIONS.md netlify.toml
-git commit -m "Redesign portfolio and update September 2026 profile"
-git push origin main
+```powershell
+.\PUBLISH.ps1
 ```
 
-Netlify: base directory `project`, build command `npm run build`, publish directory `dist`. Check the deployment result in Netlify, then open https://mecha-tek.com.
+If your computer does not permit PowerShell scripts, open `PUBLISH.ps1` in Notepad and paste its contents directly into the PowerShell window while in that same extracted folder. You do not need to change your computer’s execution policy.
 
-All original public assets remain untouched. The old résumé PDFs are archived in place; the visible résumé link now opens `resume-2026.html`.
+The script creates a separate sibling clone, checks whether GitHub has newer changes to the affected files, installs dependencies, runs TypeScript/lint/build checks, commits and pushes. It stops on an error. It preserves your existing checkout, commit history and all public assets.
+
+If GitHub changed an affected file since this edition was prepared, the script stops before copying. Merge the redesign with the newer version rather than forcing an overwrite.
+
+If Git needs your name and email, use your own GitHub identity, then finish the commit/push in the prepared checkout printed in the error. Never force push.
+
+Once Netlify reports a successful deployment, open https://mecha-tek.com and press Ctrl+Shift+R.
+
+## Preview before publishing
+
+From the extracted root:
+
+```powershell
+cd project
+npm.cmd ci
+npm.cmd run dev
+```
+
+Open the Local URL printed by Vite. Press Ctrl+C to stop.
+
+## What to check visually
+
+- Desktop and phone layout, especially navigation and the project index.
+- Drag or arrow-key rotation, wireframe, reset, and the global motion pause.
+- Project dialogs and Escape-to-close, awards images, gallery scrolling.
+- Pacing shape controls and the live optimizer/source/report links.
+- Résumé and email draft behavior.
+
+The session’s browser URL policy blocked visual QA. The production build, type checking, linting, initial React rendering and asset-preservation checks passed.
