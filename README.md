@@ -1,6 +1,6 @@
 # mecha-tek.com
 
-Source for my portfolio site — robotics and embedded projects, competition results, certificates and write-ups.
+Source for my portfolio site: robotics and embedded projects, competition results, certificates and write-ups.
 
 Live at **[mecha-tek.com](https://mecha-tek.com)**.
 
